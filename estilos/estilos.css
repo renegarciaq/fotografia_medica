@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62, 5%;
+    background-color: #F8FFF8;
+}
+
+/* INDEX */
+
+h1 {
+    color: #22577a;
+    font-style: oblique;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    padding: 20px;
+}
+
+.nav {
+    list-style-type: none;
+}
+
+.nav__menu li {
+
+    display: inline-block;
+    background-color: #deffe2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    padding: 30px;
+    /* margin: 10px; */
+
+}
+
+.section1 {
+    color: #22577a;
+    background-color: rgba(250, 235, 215, 0.164);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    padding: 20px;
+}
+
+
+
+/* .parallax{
+    background-image: url("../multimedia/manos.jpg");
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom:50px;   
+} */
+
+.imagenManos {
+    padding: 10px 10px;
+    margin: 50px 250px;
+    border-style: ridge;
+    width: 700px;
+
+}
+
+
+.volver {
+    text-decoration: none;
+    font-style: italic;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text2 {
+    text-decoration: none;
+    color: #22577a;
+    font-style: oblique;
+    font-weight: bold;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 450px;
+    display: inline-block;
+}
+
+/* HISTORIA */
+.text3 {
+    text-decoration: none;
+    color: #22577a;
+    font-style: normal;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+}
+
+/* LOREM */
+
+.text4 {
+    text-decoration: none;
+    color: #22577a;
+    font-style: normal;
+    font-weight: normal;
+    text-align: justify;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px;
+}
+
+.cirugiaMano1 {
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 50px 50px;
+    /* width:700px; */
+
+}
+
+/* MULTIMEDIA */
+
+.tituloGalerias {
+    color: #22577a;
+    background-color: rgba(250, 235, 215, 0.164);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    padding: 20px;
+}
+
+.galeria {
+    display: inline-block;
+    padding: 20px 20px;
+    margin: 10px 10px;
+    /* width:700px; */
+
+}
+
+/* CONTACTO */
+
+.tituloContacto {
+    color: #22577a;
+    background-color: rgba(250, 235, 215, 0.164);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: justify;
+    padding: 20px;
+}
+
+.form {
+    display: inline-block;
+    color: #22577a;
+    font-style: normal;
+    font-weight: bold;
+    text-align: start;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 50px 50px 10px
+}

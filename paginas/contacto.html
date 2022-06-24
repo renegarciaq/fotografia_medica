@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografía Médica Chile</title>
+
+    <link rel="shortcut icon" href="../multimedia/manos.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../estilos/estilos.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Contacto</h1>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav__menu">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="historia.html">Historia</a></li>
+            <li><a href="lorem.html">Lorem</a></li>
+            <li><a href="multimedia.html">Multimedia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+    <h2 class="tituloContacto">SI tienes consultas o comentarios no dudes en contactarme</h2>
+
+    <form class="form">
+
+        <label for="Nombre">Nombre: </label>
+        <input type="text" placeholder="Ingrese Nombre" name="nombre">
+
+        <label for="Apellido">Apellido: </label>
+        <input type="text" placeholder="Ingrese Apellido" name="apellido">
+        <br>
+        <label for="email">Correo: </label>
+        <input type="email" name="Correo" placeholder="Ingrese su correo">
+        <br>
+
+        <!-- SELECCION -->
+        <label for="genero">Indique su género:</label>
+        <input type="radio" value="Femenino" name="genero"> Femenino
+        <input type="radio" value="Masculino" name="genero"> Masculino
+        <input type="radio" value="No Especifica" name="genero"> Prefiero No Especificar
+        <br>
+        <label for="Mensaje">Mensaje: </label>
+        <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Ingrese comentarios"></textarea>
+        <br>
+
+        <label for="Comuna">Indique su Comuna</label>
+        <select name="Comuna">
+            <option value="SM">San Miguel</option>
+            <option value="LC">Las Condes</option>
+            <option value="STGO">Santiago</option>
+        </select>
+        <br>
+        <input type="checkbox"> Aceptar términos y condiciones
+        <br>
+
+        <!-- BOTONES -->
+        <input type="submit" value="Enviar formulario">
+
+        <input type="reset" value="Borrar">
+
+    </form>
+    <hr>
+
+    <a href="../index.html">Ir a Inicio</a>
+
+    <footer class="text2">Todos los derechos revervados - 2022 - </footer>
+
+</body>
+
+</html>
+
+<!-- LA PROXIMA ENTREGA SACO LOS BR CON FLEX O GRID -->
