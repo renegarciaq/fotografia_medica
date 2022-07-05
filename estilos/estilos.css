@@ -36,7 +36,8 @@ body {
     
     grid-area: titulo;
     color: #b7d2e4;
-    background-color: #22577a;
+    /* background-color: #22577a; */
+    background-image: linear-gradient(to bottom, #000000, #22577a);
     font-style: oblique;
     text-align: center;
     font-size: 1.7rem;
@@ -92,6 +93,7 @@ body {
     grid-area: foto;
     width: 100%;
     justify-self: center;
+    
 
 }
 
