@@ -11,7 +11,7 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: beige;
+    /* background-color: beige; */
 
 }
 
@@ -36,7 +36,6 @@ body {
     
     grid-area: titulo;
     color: #b7d2e4;
-    /* background-color: #22577a; */
     background-image: linear-gradient(to bottom, #000000, #22577a);
     font-style: oblique;
     text-align: center;
@@ -46,9 +45,10 @@ body {
 }
 
 .nav {
-    background-color: #22577a;
+    /* background-color: #22577a; */
     grid-area: nav;
-    
+    color: #22577a;
+        
 }
 
 .nav ul {
@@ -69,7 +69,7 @@ body {
 
 .nav li a {
     text-decoration: none;
-    color: #b7d2e4;
+    color: #22577a;
 }
 
 .nav li a:hover {
@@ -81,7 +81,7 @@ body {
 
     grid-area: main;
     color: #22577a;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: justify;
     justify-self: center;
     padding: 20px;

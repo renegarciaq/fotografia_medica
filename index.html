@@ -15,49 +15,67 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- CSS -->
+
+    <link rel="stylesheet" href="estilos/bootstrap.min.css">
     <link rel="stylesheet" href="estilos/estilos.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 </head>
 
-<body class="gridIndex">
+<body class="container-fluid">
 
-    <header id="arriba" class="titulo">
-
-        <h1 class="animate__animated animate__backInDown">Fotografía Médica Chile</h1>
+    <header id="arriba" class="row titulo">
+       
+        <h1 class="animate__animated animate__backInDown col-12 text-center">Fotografía Médica Chile</h1>
 
     </header>
 
-    <nav class="nav"> 
-        <ul class="nav__menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="paginas/Historia.html">Historia</a></li>
-            <li><a href="paginas/Lorem.html">Lorem</a></li>
-            <li><a href="paginas/Multimedia.html">Multimedia</a></li>
-            <li><a href="paginas/contacto.html">Contacto</a></li>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="col-12 nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="paginas/historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="paginas/lorem.html">Lorem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="paginas/multimedia.html">Multimedia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="paginas/contacto.html">Contacto</a>
+          </li>
         </ul>
-    </nav>
+        </div>
+    </div>
+  </nav>
+
+    <main class="row">
 
 
-
-    <main class="main1">
-
-
-        <section>
+        <section class="main1 col-12">
             Sitio dedicado a Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolorum deserunt assumenda
             a enim, hic, itaque inventore ad nihil nesciunt ut eum accusantium totam. Vitae odio adipisci eius assumenda
             cumque.
         </section>
 
+        <img class="imagenManos col-12" src="multimedia/manos.jpg" alt="manos">
 
     </main>
 
-    <img class="imagenManos" src="multimedia/manos.jpg" alt="manos">
+    
 
 
 
-    <footer class="footer">
+    <footer class="footer text-center">
 
         <h4>Todos los derechos reservados - 2022 -</h4>
 
@@ -65,7 +83,7 @@
 
     </footer>
 
-
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
 

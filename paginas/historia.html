@@ -15,28 +15,46 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
 
 </head>
 
-<body class="gridHistoria">
+<body class="container-fluid">
 
-    <header class="titulo">
-        <h1>Historia</h1>
+    <header class="row titulo">
+        <h1 class="col-12 text-center">Historia</h1>
     </header>
 
-    <nav class="nav">
-        <ul class="nav__menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="historia.html">Historia</a></li>
-            <li><a href="lorem.html">Lorem</a></li>
-            <li><a href="multimedia.html">Multimedia</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="col-12 nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="historia.html">Historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="lorem.html">Lorem</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="multimedia.html">Multimedia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+            </div>
+        </div>
+      </nav>
+    
 
-
-    <Main class="text3">
+    <Main class="text3 row">
         <section>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit error voluptatum magni quam iste eos
             eaque pariatur optio repellendus iusto esse officia doloribus non tenetur, aut quod, sit quidem voluptatem
@@ -54,6 +72,8 @@
         <h4>Todos los derechos reservados - 2022 -</h4>
 
     </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
