@@ -15,74 +15,122 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
 
 </head>
 
-<body>
+<body class="container-fluid">
 
-    <header class="titulo">
-        <h1>Contacto</h1>
+    <header class="row titulo">
+        <h1 class="col-12 text-center">Contacto</h1>
     </header>
 
-    <nav class="nav">
-        <ul class="nav__menu">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="historia.html">Historia</a></li>
-            <li><a href="lorem.html">Lorem</a></li>
-            <li><a href="multimedia.html">Multimedia</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="col-12 nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lorem.html">Lorem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="multimedia.html">Multimedia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
+    <div class="row">
+        <h3 class="tituloContacto col-12">Si tienes consultas o comentarios no dudes en contactarme</h3>
+    </div>
 
-    <h2 class="tituloContacto">SI tienes consultas o comentarios no dudes en contactarme</h2>
+    <form class="formulario">
 
-    <form class="form">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="ingrese nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ingrese apellido" required>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput3" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="formGroupExampleInput3" placeholder="ingrese correo" required>
+        </div>
 
-        <label for="Nombre">Nombre: </label>
-        <input type="text" placeholder="Ingrese Nombre" name="nombre" required>
 
-        <label for="Apellido">Apellido: </label>
-        <input type="text" placeholder="Ingrese Apellido" name="apellido" required>
-        <br>
-        <label for="email">Correo: </label>
-        <input type="email" name="Correo" placeholder="Ingrese su correo" required>
-        <br>
+        <!-- Seleccion -->
 
-        <!-- SELECCION -->
-        <label for="genero">Indique su género:</label>
-        <input type="radio" value="Femenino" name="genero"> Femenino
-        <input type="radio" value="Masculino" name="genero"> Masculino
-        <input type="radio" value="No Especifica" name="genero"> Prefiero No Especificar
-        <br>
-        <label for="Mensaje">Mensaje: </label>
-        <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Ingrese comentarios"></textarea>
-        <br>
+        <h5>Indique su género</h5>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Femenino
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" for="flexRadioDefault2">Masculino
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault">
+            <label class="form-check-label" for="flexRadioDefault3">
+                Prefiero no especificar
+            </label>
+        
+            <!-- Comentarios del form -->
+            <h5 class="titulo-comentarios">Comentarios</h5>
+            <div class="form" required>
+                <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
 
-        <label for="Comuna">Indique su Comuna</label>
+            <!-- el tema de la comuna quedo stand by -->
+
+            <!--    <label for="Comuna">Indique su Comuna</label>
         <select name="Comuna">
             <option value="SM">San Miguel</option>
             <option value="LC">Las Condes</option>
             <option value="STGO">Santiago</option>
-        </select>
-        <br>
-        <input type="checkbox"> Aceptar términos y condiciones
-        <br>
+        </select> -->
 
+        <div class="terms">
+            <input type="checkbox"> Aceptar términos y condiciones
+        </div>
         <!-- BOTONES -->
-        <input type="submit" value="Enviar formulario">
-
-        <input type="reset" value="Borrar">
-
+        <div class="botones">
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Borrar">
+        </div>
     </form>
     <hr>
 
     <a href="../index.html">Ir a Inicio</a>
 
-    <footer class="text2">Todos los derechos revervados - 2022 - </footer>
+    <footer class="footer text-center">
+
+        <h4>Todos los derechos reservados - 2022 -</h4>
+
+    </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 
 </html>
-

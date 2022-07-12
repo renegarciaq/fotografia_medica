@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,39 +11,89 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
+
+    <link rel="stylesheet" href="../estilos/bootstrap.min.css">
     <link rel="stylesheet" href="../estilos/estilos.css">
-    
+
 </head>
 
-<body>
+<body class="container-fluid">
 
-    <header class="titulo">
-        <h1>Lorem</h1>
+    <header class="row titulo">
+        <h1 class="col-12 text-center">Lorem</h1>
     </header>
 
-    <nav class="nav">   
-        <ul class="nav__menu">
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="historia.html">Historia</a></li>
-        <li><a href="lorem.html">Lorem</a></li>
-        <li><a href="multimedia.html">Multimedia</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-</nav> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="col-12 nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="historia.html">Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="lorem.html">Lorem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="multimedia.html">Multimedia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <article class="text4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime labore, quia dolorum saepe, accusantium dignissimos magni magnam totam ipsum numquam odit nisi modi unde ea aspernatur quibusdam neque sequi ad deserunt, odio ratione possimus! Natus veritatis perferendis modi iusto doloremque, omnis ut adipisci ea nemo, numquam facere dolore culpa suscipit aliquam blanditiis obcaecati. Pariatur, molestias iusto? Quaerat, magni dolorem. Possimus soluta blanditiis repellat aliquid facere molestiae rerum placeat debitis inventore alias eligendi sapiente est nihil, non perspiciatis minus harum tempore dolorem iusto molestias ad illum autem libero quibusdam! Perspiciatis fugit totam provident fuga iusto praesentium minima doloremque illo sequi at. Nulla eum sed numquam magni animi quidem quaerat culpa necessitatibus suscipit eos dolores unde dignissimos vero deleniti laboriosam cumque obcaecati tempora atque blanditiis, error omnis, maiores debitis? Adipisci, voluptate hic molestias beatae odio harum quae fugiat sit soluta eius delectus asperiores rerum natus amet sequi, ratione aspernatur itaque quis laudantium, similique provident consequuntur. Itaque, deleniti sunt quidem rem voluptatem quis veniam possimus dolores cumque ducimus quod dolorem, est expedita doloremque porro labore? At quas, dolorem unde ratione ducimus maiores ea labore voluptates repellat in dolore voluptatibus magnam numquam cumque laboriosam quis dolorum vitae, libero praesentium delectus. Illo, architecto? Illum, quia!
+    <article class="row">
+
+        <p class="col-12 text4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime labore, quia dolorum
+            saepe, accusantium
+            dignissimos magni magnam totam ipsum numquam odit nisi modi unde ea aspernatur quibusdam neque sequi ad
+            deserunt, odio ratione possimus! Natus veritatis perferendis modi iusto doloremque, omnis ut adipisci ea
+            nemo,
+            numquam facere dolore culpa suscipit aliquam blanditiis obcaecati. Pariatur, molestias iusto? Quaerat, magni
+            dolorem. Possimus soluta blanditiis repellat aliquid facere molestiae rerum placeat debitis inventore alias
+            eligendi sapiente est nihil, non perspiciatis minus harum tempore dolorem iusto molestias ad illum autem
+            libero
+            quibusdam! Perspiciatis fugit totam provident fuga iusto praesentium minima doloremque illo sequi at. Nulla
+            eum
+            sed numquam magni animi quidem quaerat culpa necessitatibus suscipit eos dolores unde dignissimos vero
+            deleniti
+            laboriosam cumque obcaecati tempora atque blanditiis, error omnis, maiores debitis?
     </article>
 
-    <img class="cirugiaMano1" src="../multimedia/cirugiaMano1.jpg" alt="cirugia Mano 1">
-    <img class="cirugiaMano1" src="../multimedia/cirugiaMano2.jpg" alt="cirugia Mano 2">
 
+    <div id="carouselExampleSlidesOnly" class="carousel slide row justify-content-center" data-bs-ride="carousel">
+        <div class="carousel-inner col-12">
+            <div class="carousel-item active">
+                <img src="../multimedia/cirugiaMano1.jpg" class="d-block w-100" alt="cirugiaMano1">
+            </div>
+            <div class="carousel-item">
+                <img src="../multimedia/cirugiaMano2.jpg" class="d-block w-100" alt="cirugiaMano2">
+            </div>
+        </div>
+    </div>
 
+    <footer class="footer text-center">
 
+        <h4>Todos los derechos reservados - 2022 -</h4>
 
-    <footer class="footer">Todos los derechos revervados - 2022 - </footer>
+    </footer>
+
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
