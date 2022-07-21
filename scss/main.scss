@@ -1,1 +1,40 @@
-@import "index"
+@import "global";
+
+header{
+    position:relative;
+    top: 0;
+    background-color: rgb(52, 53, 51);
+    width: 100%;
+}
+
+nav {
+    @include cajaFlex (flex, row, nowrap);
+
+    ul{
+        display: flex;
+        padding: 0;
+
+        a{
+            padding: 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        
+        a:hover{
+            color: #9eb3da;
+            transform: scale(1.1);
+        }
+    
+    }
+
+}
+
+.presentacion{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include cajaFlex (flex, row, wrap);
+
+    .flexItem1{
+        text-align:justify;
+    }
+}
