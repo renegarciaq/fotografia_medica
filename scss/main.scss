@@ -1,27 +1,28 @@
 @import "global";
 
 header{
-    position:relative;
+    position: relative;
     top: 0;
-    background-color: rgb(52, 53, 51);
+    background: map-get($colores, navColor);
     width: 100%;
 }
 
 nav {
-    @include cajaFlex (flex, row, nowrap);
+    @include cajaFlex (flex, row, wrap, flex-end, center);
+    padding-right: 20px;
 
     ul{
         display: flex;
         padding: 0;
 
         a{
-            padding: 10px;
-            font-size: 1.6rem;
-            font-weight: bold;
+            padding: 5px;
+            font-size: map-get($fuentes, font-nav);
+            font-weight:400;
         }
         
         a:hover{
-            color: #9eb3da;
+            color: map-get($colores, color4);
             transform: scale(1.1);
         }
     
@@ -30,11 +31,15 @@ nav {
 }
 
 .presentacion{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    @include cajaFlex (flex, row, wrap);
-
-    .flexItem1{
-        text-align:justify;
-    }
+    @include cajaFlex (flex, row, wrap, flex-start, center);
+    padding-top: 30px;
+    padding-bottom: 300px;
+    padding-left: 50px
 }
+
+.contenido-footer{
+    @include cajaFlex (flex, column, wrap, flex-end, center);
+    padding-top: 200px;
+    
+}
+

@@ -4,100 +4,142 @@
     box-sizing: border-box;
 }
 
+//VARIABLES<<
+
+$colores: (
+    color1: #1A1B1D,
+    color2: #D9EAF4,
+    color3: #25cccc,
+    color4: #DADEE1,
+    color5: #E8F4D9,
+    color6: #FFFFFF,
+    navColor: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(8,11,11,1) 42%, rgba(37,204,204,1) 100%)
+);
+
+$fuentes: (
+    font-nav: 1.5rem,
+    font-p: 1.2rem,
+    font-h1: 3.0rem,
+    font-h2: 2.4rem,
+    font-h3: 2.0rem
+);
+
+//MIXINS
+
+@mixin cajaFlex($display, $direction, $corte, $justify, $align) {
+    display: $display;
+    flex-flow: $direction $corte; 
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin grid($columnas, $espacio) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espacio;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 0em;
+
+    }
+}
+
+
 html {
     font-size: 62,5%;
     height: 100%;
+    background-image: url("../multimedia/manosFondo2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 body {
+    height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgb(241, 239, 239);
-    
+    /* background-color: map-get($colores, color1); */
+
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     text-decoration: none;
     display: inline-block;
-    color: rgb(134, 132, 132);
+    color: map-get($colores, color2);
+    /* border: 1px solid #d6d6d6;
+    border-radius: 15px; */
 }
 
-img{
+/* img {
     width: 80%;
     height: auto;
-}
+} */
 
-.cabecera, .presentacion, .contenido-footer{
+.cabecera,
+.presentacion,
+.contenido-footer {
     width: 100%;
     margin: auto;
     margin-bottom: 10px;
 }
 
-.contenido-footer{
+.contenido-footer {
     text-align: center;
 }
 
-//MAP
-
-$fuentes: (
-font-p: 1.6rem,
-font-h1: 3.0rem,
-font-h2: 2.4rem,
-font-h3: 2.0rem
-);
-
-p{
+p {
     font-size: map-get($fuentes, font-p);
-    color: rgb(134, 132, 132);
+    color: map-get($colores, color6);
+
 }
 
-h1{
+h1 {
     font-size: map-get($fuentes , font-h1);
-    color: #9eb3da;
+    color: map-get($colores , color5);
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: map-get($colores , color3) 0.1em 0.1em 0.2em;
+    margin-top: 30px;
+    margin-left: 20px;
 }
 
-h2{
+h2 {
     font-size: map-get($fuentes , font-h2);
-    color: rgb(134, 132, 132)
+    color: map-get($colores , color2);
+    font-weight: 400;
 }
 
-h3{
+h3 {
     font-size: map-get($fuentes , font-h3);
     font-weight: lighter;
+    color: map-get($colores , color6)
 }
 
 // EXTEND
 
-.btn{
+.btn {
     border: none;
-    border-radius: 2px;
-    padding: 0.7em 1em;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
     margin-right: 5px;
     margin-bottom: 5px;
-    font-size: 1.5rem;
+    font-size: map-get($fuentes , font-p);
     font-weight: 100;
 }
 
-.btn-submit{
+.btn-submit {
     @extend .btn;
     color: #fff;
-    background-color: #6495ED;
+    background-color: map-get($colores , color3);
 }
 
-.btn-reset{
+.btn-reset {
     @extend .btn;
-    background-color: rgb(134, 132, 132);
-
-}
-
-// MIXINS
-
-@mixin cajaFlex($display, $direction, $wrap){
-    display: $display;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
+    background-color:map-get($colores , color4);
 }
