@@ -1,10 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-//VARIABLES<<
+html {
+    box-sizing: border-box;
+    font-size: 62,5%;
+    height: 100%;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+// VARIABLES<<
 
 $colores: (
     color1: #1A1B1D,
@@ -13,27 +22,42 @@ $colores: (
     color4: #DADEE1,
     color5: #E8F4D9,
     color6: #FFFFFF,
-    navColor: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(8,11,11,1) 42%, rgba(37,204,204,1) 100%)
+    color7: #414141,
+    navColor: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(37,204,204,1) 61%)
 );
 
 $fuentes: (
     font-nav: 1.5rem,
-    font-p: 1.2rem,
     font-h1: 3.0rem,
-    font-h2: 2.4rem,
-    font-h3: 2.0rem
+    font-h2: 2.0rem,
+    font-h3: 1.5rem,
+    font-h4: 1.3rem,
+    font-p: 1.1em,
 );
 
-//MIXINS
+$breakpoints: (
+    sm: 540px,
+    md: 992px,
+);
 
-@mixin cajaFlex($display, $direction, $corte, $justify, $align) {
-    display: $display;
+// MIXINS
+
+@mixin cajaFlex($direction, $corte, $justify, $align) {
+    display: flex;
     flex-flow: $direction $corte; 
     justify-content: $justify;
     align-items: $align;
 }
 
-@mixin grid($columnas, $espacio) {
+@mixin media($breakpoint){
+    @media screen and(max-width:map-get($breakpoints,$breakpoint)){
+        @content;
+    }
+}
+
+
+
+/* @mixin grid($columnas, $espacio) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
     gap: $espacio;
@@ -43,23 +67,33 @@ $fuentes: (
         gap: 0em;
 
     }
-}
+} */
 
+// KEYFRAMES
 
-html {
-    font-size: 62,5%;
-    height: 100%;
-    background-image: url("../multimedia/manosFondo2.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+@keyframes aparecer {
+    0%{
+        opacity: 0%;
+    }
+    25%{
+        opacity: 25%;
+    }
+    50%{
+        opacity: 50%;
+    }
+    75%{
+        opacity: 75%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
 }
 
 body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    /* background-color: map-get($colores, color1); */
+    background-color: map-get($colores, color6);
 
 }
 
@@ -70,15 +104,10 @@ ul {
 a {
     text-decoration: none;
     display: inline-block;
-    color: map-get($colores, color2);
+    color: map-get($colores, color1);
     /* border: 1px solid #d6d6d6;
     border-radius: 15px; */
 }
-
-/* img {
-    width: 80%;
-    height: auto;
-} */
 
 .cabecera,
 .presentacion,
@@ -88,36 +117,39 @@ a {
     margin-bottom: 10px;
 }
 
-.contenido-footer {
-    text-align: center;
-}
-
 p {
     font-size: map-get($fuentes, font-p);
-    color: map-get($colores, color6);
+    color: map-get($colores, color1);
 
 }
 
 h1 {
     font-size: map-get($fuentes , font-h1);
-    color: map-get($colores , color5);
-    font-weight: 400;
-    font-style: italic;
-    text-shadow: map-get($colores , color3) 0.1em 0.1em 0.2em;
+    color: map-get($colores , color1);
+    font-weight: 500;
+    font-style:normal;
+    /* text-shadow: map-get($colores , color1) 0.5px 0.1px 0.1em; */
     margin-top: 30px;
-    margin-left: 20px;
 }
 
 h2 {
     font-size: map-get($fuentes , font-h2);
-    color: map-get($colores , color2);
+    color: map-get($colores , color1);
     font-weight: 400;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 h3 {
     font-size: map-get($fuentes , font-h3);
-    font-weight: lighter;
-    color: map-get($colores , color6)
+    font-weight: 300;
+    color: map-get($colores , color1);
+}
+
+h4 {
+    font-size: map-get($fuentes , font-h4);
+    font-weight: 200;
+    color: map-get($colores , color6);
 }
 
 // EXTEND

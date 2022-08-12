@@ -1,45 +1,208 @@
 @import "global";
+@import "mediaQ";
 
-header{
+header {
     position: relative;
     top: 0;
     background: map-get($colores, navColor);
     width: 100%;
 }
 
+.logo {
+    @include cajaFlex (row, wrap, flex-start, center);
+    height: 80px;
+
+}
+
 nav {
-    @include cajaFlex (flex, row, wrap, flex-end, center);
+    @include cajaFlex (row, wrap, flex-end, center);
     padding-right: 20px;
 
-    ul{
+    ul {
         display: flex;
         padding: 0;
 
-        a{
-            padding: 5px;
+        a {
+            padding: 10px;
             font-size: map-get($fuentes, font-nav);
-            font-weight:400;
+            font-weight: 400;
         }
-        
-        a:hover{
+
+        a:hover {
             color: map-get($colores, color4);
             transform: scale(1.1);
         }
-    
+
     }
 
 }
 
-.presentacion{
-    @include cajaFlex (flex, row, wrap, flex-start, center);
-    padding-top: 30px;
-    padding-bottom: 300px;
-    padding-left: 50px
+.presentacion {
+    @include cajaFlex (row, nowrap, space-around, center);
+    width: 90%;
+    margin-top: 20px;
+    padding: 30px 20px;
+    background-color: map-get($colores, color2);
+    border-radius: 10px;
+
+    .intro {
+        width: 50%;
+        text-align: justify;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 40px;
+
+        .picIntro {
+            text-align: center
+        }
+    }
+
 }
 
-.contenido-footer{
-    @include cajaFlex (flex, column, wrap, flex-end, center);
-    padding-top: 200px;
+.objetivos {
+    padding-top: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
     
 }
 
+.obje-1 {
+    @include cajaFlex (row, nowrap, space-around, stretch);
+    text-align: center;
+    align-content: center;
+    font-weight: 500;
+        
+    div{
+        /* width: 33%; */
+        width: 200px;
+        height: auto;
+        background-color: map-get($colores, color5);
+        border-radius: 40px;
+        margin-bottom: 70px;
+    }
+}
+
+.obje-2 {
+    @include cajaFlex (row, nowrap, space-around, center);
+    margin-top: 70px;
+    text-align: center;
+    font-weight: 500;
+
+    div{
+        width: 200px;
+        height: 150px;
+        background-color: map-get($colores, color5);
+        border-radius: 50px;
+        margin-bottom: 70px;
+    }
+}
+
+.parallax {
+    background: url("/multimedia/objetivos.jpg");
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+
+.eticaPics{
+    @include cajaFlex (row, nowrap, space-evenly, center);
+    padding-top: 50px;
+    animation-name: aparecer;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+
+    :hover{
+        transform: scale(1.1);
+        transition: all 2s;
+    }
+
+}
+
+.fotos{
+    max-width: 400px;
+    margin-top: 40px;
+    border: solid 5px #000000;
+    border-radius: 10px;
+}
+
+.galeria{
+    @include cajaFlex(row, wrap, space-around, center);
+    margin-top: 40px;
+
+    :hover{
+        transform: scale(1.1);
+        transition: all 1s;
+    }
+}
+
+.video{
+    @include cajaFlex(column, wrap, center, center);
+    margin-top: 40px;
+}
+
+.titulos{
+    padding-left: 20px;
+}
+
+.formulario{
+@include cajaFlex (row, nowrap, space-evenly, center);
+width: 80%;
+margin: 40px 100px;
+/* background-color: map-get($colores, color2); */
+border-radius: 20px;
+
+    img{
+        width: 500px;
+    }
+
+
+/* .formulario{
+    @include cajaFlex(column,nowrap,space-around,center);
+    margin-top: 40px;
+    background-color: map-get($colores, color2);
+    border-radius: 20px;
+    width: 500px; */
+    /* height: 500px; */
+    
+
+    label{
+        font-weight: 600;
+        color: map-get($colores, color1)
+    }
+
+    .datos1 {
+        @include cajaFlex(column, nowrap, space-around, flex-start);
+        margin-top: 20px;
+    }
+
+    .datos2 {
+        @include cajaFlex(column, nowrap, space-around, flex-start);
+        margin-top:20px;
+    }
+
+    .comentarios {
+        @include cajaFlex(column, nowrap, space-around, flex-start);
+        margin-top:20px;
+    }
+
+    .terms {
+        @include cajaFlex(column, nowrap, space-around, flex-start);
+        margin-top:20px;    
+    }
+    .botones {
+        @include cajaFlex(row, nowrap, flex-start, flex-start);
+        margin-top:20px;
+    }
+}
+
+    .contenido-footer {
+    @include cajaFlex (column, nowrap, space-between, center);
+    min-height: 50px;
+    background-color: map-get($colores, color7);
+    text-align: center;
+    margin-top: 200px;
+    padding-top: 5px;
+    }

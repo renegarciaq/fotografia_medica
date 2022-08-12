@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotografía Médica Chile | Contacto</title>
 
-    <link rel="shortcut icon" href="../multimedia/manos.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="/multimedia/Logo Leo 2.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
 <body>
 
     <header class="cabecera">
-
+        <a class="logo" href="/index.html"><img src="/multimedia/Logo Leo 2.png" alt="logo"></a>
         <nav class="nav">
             <ul class="nav__menu">
                 <li><a href="../index.html">Inicio</a></li>
@@ -38,57 +38,55 @@
 
     </header>
 
-    <div>
-        <h1 class="titulos">Contacto</h1>
+    <div class="titulos">
+        <h1>CONTACTO</h1>
+        <h3>Si tienes consultas o comentarios no dudes en contactarme</h3>
     </div>
 
-    <h2 class="tituloContacto">Si tienes consultas o comentarios no dudes en contactarme</h2>
+    <div class="formulario">
+        <form class="form">
 
-    <form class="form">
+            <div class="datos1">
+                <label for="Nombre">Nombre: </label>
+                <input type="text" placeholder="Ingrese Nombre" name="nombre" required>
 
-        <label for="Nombre">Nombre: </label>
-        <input type="text" placeholder="Ingrese Nombre" name="nombre" required>
+                <label for="Apellido">Apellido: </label>
+                <input type="text" placeholder="Ingrese Apellido" name="apellido" required>
 
-        <label for="Apellido">Apellido: </label>
-        <input type="text" placeholder="Ingrese Apellido" name="apellido" required>
-        <br>
-        <label for="email">Correo: </label>
-        <input type="email" name="Correo" placeholder="Ingrese su correo" required>
-        <br>
+                <label for="email">Correo: </label>
+                <input type="email" name="Correo" placeholder="Ingrese su correo" required>
+            </div>
 
-        <!-- SELECCION -->
-        <label for="genero">Indique su género:</label>
-        <input type="radio" value="Femenino" name="genero"> Femenino
-        <input type="radio" value="Masculino" name="genero"> Masculino
-        <input type="radio" value="No Especifica" name="genero"> Prefiero No Especificar
-        <br>
-        <label for="Mensaje">Mensaje: </label>
-        <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Ingrese comentarios"></textarea>
-        <br>
+            <div class="datos2">
+                <label for="genero">Indique su género:</label>
+                <input type="radio" value="Femenino" name="genero"> Femenino
+                <input type="radio" value="Masculino" name="genero"> Masculino
+                <input type="radio" value="No Especifica" name="genero"> Prefiero No Especificar
+            </div>
 
-        <label for="Comuna">Indique su Comuna</label>
-        <select name="Comuna">
-            <option value="SM">San Miguel</option>
-            <option value="LC">Las Condes</option>
-            <option value="STGO">Santiago</option>
-        </select>
-        <br>
-        <input type="checkbox"> Aceptar términos y condiciones
-        <br>
+            <div class="comentarios">
+                <label for="Mensaje">Mensaje: </label>
+                <textarea name="Mensaje" id="" cols="30" rows="10" placeholder="Ingrese comentarios"></textarea>
+            </div>
 
-        <!-- BOTONES -->
-        <input class="btn-submit" type="submit" value="Enviar formulario">
+            <div class="terms">
+                <input type="checkbox"> Aceptar términos y condiciones
+            </div>
 
-        <input class="btn-reset" type="reset" value="Borrar">
+            <div class="botones">
+                <input class="btn-submit" type="submit" value="Enviar formulario">
 
-    </form>
-    <hr>
+                <input class="btn-reset" type="reset" value="Borrar">
+            </div>
+        </form>
 
-    <a href="../index.html">Ir a Inicio</a>
+        <img src="/multimedia/contact.png" alt="contacto">
+
+    </div>
 
     <footer class="contenido-footer">
 
-        <h3>Todos los derechos reservados - 2022 -</h3>
+        <h4>Todos los derechos reservados - 2022 -</h4>
 
     </footer>
 </body>

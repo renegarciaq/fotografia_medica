@@ -1,0 +1,37 @@
+// TABLET
+
+@include media(md){
+    .cabecera {
+        @include cajaFlex(column, wrap, center, center);
+        background: map-get($colores, color6);
+
+        .nav ul{
+            margin-top: 60px;
+            background: map-get($colores, color3);
+            width: 100%;
+            }
+    }
+}
+
+@include media(md){
+.presentacion {
+    @include cajaFlex(column, wrap, center, center);
+    }
+}
+
+/*     .presentacion {
+        text-align: center;
+        @include cajaFlex (column, wrap, center, center);
+    }
+
+    .nav{
+        @include cajaFlex (column, wrap, center, center)
+    }
+} */
+
+
+// MOVILES
+
+@media(max-width: 500px){
+
+}
