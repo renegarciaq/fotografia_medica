@@ -10,17 +10,6 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; }
 
-/* @mixin grid($columnas, $espacio) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $espacio;
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 0em;
-
-    }
-} */
 @keyframes aparecer {
   0% {
     opacity: 0%; }
@@ -36,7 +25,7 @@ html {
 body {
   height: 100%;
   font-family: 'Montserrat', sans-serif;
-  background-color: #FFFFFF; }
+  background-color: #F7F8F8; }
 
 ul {
   list-style-type: none; }
@@ -44,9 +33,7 @@ ul {
 a {
   text-decoration: none;
   display: inline-block;
-  color: #1A1B1D;
-  /* border: 1px solid #d6d6d6;
-    border-radius: 15px; */ }
+  color: #1A1B1D; }
 
 .cabecera,
 .presentacion,
@@ -64,7 +51,6 @@ h1 {
   color: #1A1B1D;
   font-weight: 500;
   font-style: normal;
-  /* text-shadow: map-get($colores , color1) 0.5px 0.1px 0.1em; */
   margin-top: 30px; }
 
 h2 {
@@ -99,65 +85,94 @@ h4 {
   background-color: #25cccc; }
 
 .btn-reset {
-  background-color: #DADEE1; }
+  background-color: #F7F8F8; }
 
-@media screen and (max-width: 992px) {
-  .cabecera {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF; }
-    .cabecera .nav ul {
-      margin-top: 60px;
-      background: #25cccc;
-      width: 100%; } }
-
-@media screen and (max-width: 992px) {
-  .presentacion {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center; } }
-
-/*     .presentacion {
-        text-align: center;
-        @include cajaFlex (column, wrap, center, center);
-    }
-
-    .nav{
-        @include cajaFlex (column, wrap, center, center)
-    }
-} */
 header {
-  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   top: 0;
-  background: linear-gradient(90deg, white 0%, white 31%, #25cccc 61%);
+  background: linear-gradient(90deg, #f7f8f8 0%, #f7f8f8 31%, #25cccc 61%);
   width: 100%; }
+  @media screen and (max-width: 992px) {
+    header {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    header {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-width: 992px) {
+    header {
+      background: #F7F8F8; } }
 
 .logo {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
-  height: 80px; }
+  min-height: 80px; }
+  @media screen and (max-width: 992px) {
+    .logo {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .logo {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
 
-nav {
+.nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
   align-items: center;
   padding-right: 20px; }
-  nav ul {
-    display: flex;
-    padding: 0; }
-    nav ul a {
-      padding: 10px;
-      font-size: 1.5rem;
-      font-weight: 400; }
-    nav ul a:hover {
-      color: #DADEE1;
-      transform: scale(1.1); }
+  @media screen and (max-width: 992px) {
+    .nav {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .nav {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-width: 992px) {
+    .nav {
+      width: 100%;
+      background: linear-gradient(90deg, #f7f8f8 5%, #25cccc 50%, #f7f8f8 95%);
+      align-items: center; } }
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0; }
+  @media screen and (max-width: 992px) {
+    ul {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    ul {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  ul a {
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    min-width: 150px;
+    text-align: center; }
+  ul a:hover {
+    color: #F7F8F8;
+    transform: scale(1.2); }
 
 .presentacion {
   display: flex;
@@ -168,15 +183,27 @@ nav {
   margin-top: 20px;
   padding: 30px 20px;
   background-color: #D9EAF4;
-  border-radius: 10px; }
+  border-radius: 10px;
+  text-align: justify; }
+  @media screen and (max-width: 992px) {
+    .presentacion {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .presentacion {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
   .presentacion .intro {
-    width: 50%;
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
     line-height: 40px; }
-    .presentacion .intro .picIntro {
-      text-align: center; }
+
+@media screen and (max-width: 540px) {
+  .picIntro {
+    max-width: 300px; } }
 
 .objetivos {
   padding-top: 70px;
@@ -187,17 +214,40 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: space-between;
   text-align: center;
   align-content: center;
   font-weight: 500; }
+  @media screen and (max-width: 992px) {
+    .obje-1 {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .obje-1 {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
   .obje-1 div {
-    /* width: 33%; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
     width: 200px;
-    height: auto;
+    height: 150px;
     background-color: #E8F4D9;
     border-radius: 40px;
     margin-bottom: 70px; }
+    @media screen and (max-width: 992px) {
+      .obje-1 div {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .obje-1 div {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
 
 .obje-2 {
   display: flex;
@@ -207,12 +257,36 @@ nav {
   margin-top: 70px;
   text-align: center;
   font-weight: 500; }
+  @media screen and (max-width: 992px) {
+    .obje-2 {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .obje-2 {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
   .obje-2 div {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
     width: 200px;
     height: 150px;
     background-color: #E8F4D9;
     border-radius: 50px;
     margin-bottom: 70px; }
+    @media screen and (max-width: 992px) {
+      .obje-2 div {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .obje-2 div {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
 
 .parallax {
   background: url("/multimedia/objetivos.jpg");
@@ -232,6 +306,22 @@ nav {
   animation-name: aparecer;
   animation-duration: 2s;
   animation-timing-function: linear; }
+  @media screen and (max-width: 992px) {
+    .eticaPics {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .eticaPics {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-width: 992px) {
+    .eticaPics img {
+      margin-bottom: 20px; } }
+  @media screen and (max-width: 540px) {
+    .eticaPics img {
+      width: 300px; } }
   .eticaPics :hover {
     transform: scale(1.1);
     transition: all 2s; }
@@ -241,6 +331,9 @@ nav {
   margin-top: 40px;
   border: solid 5px #000000;
   border-radius: 10px; }
+  @media screen and (max-width: 540px) {
+    .fotos {
+      width: 300px; } }
 
 .galeria {
   display: flex;
@@ -248,7 +341,17 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin-top: 40px; }
-  .galeria :hover {
+  @media screen and (max-width: 992px) {
+    .galeria {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .galeria {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  .galeria s :hover {
     transform: scale(1.1);
     transition: all 1s; }
 
@@ -258,6 +361,19 @@ nav {
   justify-content: center;
   align-items: center;
   margin-top: 40px; }
+  @media screen and (max-width: 992px) {
+    .video {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .video {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .video iframe {
+      width: 300px; } }
 
 .titulos {
   padding-left: 20px; }
@@ -267,60 +383,132 @@ nav {
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
   margin: 40px 100px;
-  /* background-color: map-get($colores, color2); */
-  border-radius: 20px;
-  /* .formulario{
-    @include cajaFlex(column,nowrap,space-around,center);
-    margin-top: 40px;
-    background-color: map-get($colores, color2);
-    border-radius: 20px;
-    width: 500px; */
-  /* height: 500px; */ }
+  background-color: #D9EAF4;
+  border-radius: 20px; }
+  @media screen and (max-width: 992px) {
+    .formulario {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .formulario {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }
+  @media screen and (max-width: 992px) {
+    .formulario {
+      width: auto; } }
+  @media screen and (max-width: 540px) {
+    .formulario {
+      margin: inherit;
+      margin-top: 20px; } }
   .formulario img {
-    width: 500px; }
+    max-width: 500px; }
+    @media screen and (max-width: 992px) {
+      .formulario img {
+        width: 300px; } }
   .formulario label {
     font-weight: 600;
     color: #1A1B1D; }
   .formulario .datos1 {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: space-around;
     align-items: flex-start;
     margin-top: 20px; }
+    @media screen and (max-width: 992px) {
+      .formulario .datos1 {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .formulario .datos1 {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
   .formulario .datos2 {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: flex-start;
     margin-top: 20px; }
+    @media screen and (max-width: 992px) {
+      .formulario .datos2 {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .formulario .datos2 {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
   .formulario .comentarios {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: flex-start;
     margin-top: 20px; }
+    @media screen and (max-width: 992px) {
+      .formulario .comentarios {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .formulario .comentarios {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
   .formulario .terms {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: flex-start;
     margin-top: 20px; }
+    @media screen and (max-width: 992px) {
+      .formulario .terms {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .formulario .terms {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
   .formulario .botones {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 20px; }
+    @media screen and (max-width: 992px) {
+      .formulario .botones {
+        flex-flow: column wrap;
+        justify-content: space-around;
+        align-items: center; } }
+    @media screen and (max-width: 540px) {
+      .formulario .botones {
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center; } }
 
 .contenido-footer {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: 50px;
   background-color: #414141;
   text-align: center;
   margin-top: 200px;
   padding-top: 5px; }
+  @media screen and (max-width: 992px) {
+    .contenido-footer {
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center; } }
+  @media screen and (max-width: 540px) {
+    .contenido-footer {
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center; } }

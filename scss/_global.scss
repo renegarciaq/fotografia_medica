@@ -19,11 +19,12 @@ $colores: (
     color1: #1A1B1D,
     color2: #D9EAF4,
     color3: #25cccc,
-    color4: #DADEE1,
+    color4: #F7F8F8,
     color5: #E8F4D9,
     color6: #FFFFFF,
     color7: #414141,
-    navColor: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 31%, rgba(37,204,204,1) 61%)
+    navColor: linear-gradient(90deg, rgba(247,248,248,1) 0%, rgba(247,248,248,1) 31%, rgba(37,204,204,1) 61%),
+    navMob: linear-gradient(90deg, rgba(247,248,248,1) 5%, rgba(37,204,204,1) 50%, rgba(247,248,248,1) 95%)
 );
 
 $fuentes: (
@@ -35,11 +36,6 @@ $fuentes: (
     font-p: 1.1em,
 );
 
-$breakpoints: (
-    sm: 540px,
-    md: 992px,
-);
-
 // MIXINS
 
 @mixin cajaFlex($direction, $corte, $justify, $align) {
@@ -47,27 +43,19 @@ $breakpoints: (
     flex-flow: $direction $corte; 
     justify-content: $justify;
     align-items: $align;
-}
 
-@mixin media($breakpoint){
-    @media screen and(max-width:map-get($breakpoints,$breakpoint)){
-        @content;
+    @media screen and(max-width:992px){
+        flex-flow: column wrap; 
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    @media screen and(max-width:540px){
+        flex-flow: column wrap; 
+        justify-content: center;
+        align-items: center;
     }
 }
-
-
-
-/* @mixin grid($columnas, $espacio) {
-    display: grid;
-    grid-template-columns: repeat($columnas, 1fr);
-    gap: $espacio;
-
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        gap: 0em;
-
-    }
-} */
 
 // KEYFRAMES
 
@@ -93,7 +81,7 @@ $breakpoints: (
 body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: map-get($colores, color6);
+    background-color: map-get($colores, color4);
 
 }
 
@@ -105,8 +93,6 @@ a {
     text-decoration: none;
     display: inline-block;
     color: map-get($colores, color1);
-    /* border: 1px solid #d6d6d6;
-    border-radius: 15px; */
 }
 
 .cabecera,
@@ -128,7 +114,6 @@ h1 {
     color: map-get($colores , color1);
     font-weight: 500;
     font-style:normal;
-    /* text-shadow: map-get($colores , color1) 0.5px 0.1px 0.1em; */
     margin-top: 30px;
 }
 

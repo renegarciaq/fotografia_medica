@@ -1,41 +1,52 @@
 @import "global";
-@import "mediaQ";
 
 header {
-    position: relative;
+    @include cajaFlex (row, wrap, space-between, center);
     top: 0;
     background: map-get($colores, navColor);
     width: 100%;
+
+    @media screen and(max-width:992px) {
+        background: map-get($colores, color4);
+    }
 }
 
 .logo {
     @include cajaFlex (row, wrap, flex-start, center);
-    height: 80px;
-
+    min-height: 80px;
 }
 
-nav {
+.nav {
     @include cajaFlex (row, wrap, flex-end, center);
     padding-right: 20px;
+    
+    @media screen and(max-width:992px) {
+        width: 100%;
+        background: map-get($colores, navMob);
+        align-items: center;  
+        
+    }
+} 
 
     ul {
-        display: flex;
+        @include cajaFlex (row, wrap, flex-end, center);
         padding: 0;
 
         a {
             padding: 10px;
             font-size: map-get($fuentes, font-nav);
             font-weight: 400;
-        }
+            min-width: 150px;
+            text-align: center;
+
+            }
 
         a:hover {
             color: map-get($colores, color4);
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
 
     }
-
-}
 
 .presentacion {
     @include cajaFlex (row, nowrap, space-around, center);
@@ -44,38 +55,39 @@ nav {
     padding: 30px 20px;
     background-color: map-get($colores, color2);
     border-radius: 10px;
+    text-align: justify;
 
     .intro {
-        width: 50%;
         text-align: justify;
         padding-left: 10px;
         padding-right: 10px;
         line-height: 40px;
-
-        .picIntro {
-            text-align: center
-        }
     }
-
 }
 
+.picIntro {
+    @media screen and(max-width:540px) {
+            max-width: 300px;
+            }
+    }
+    
 .objetivos {
     padding-top: 70px;
     margin-left: 10px;
     margin-right: 10px;
-    
+
 }
 
 .obje-1 {
-    @include cajaFlex (row, nowrap, space-around, stretch);
+    @include cajaFlex (row, nowrap, space-around, space-between);
     text-align: center;
     align-content: center;
     font-weight: 500;
-        
-    div{
-        /* width: 33%; */
+
+    div {
+        @include cajaFlex (column, wrap, space-around, center);
         width: 200px;
-        height: auto;
+        height: 150px;
         background-color: map-get($colores, color5);
         border-radius: 40px;
         margin-bottom: 70px;
@@ -88,7 +100,8 @@ nav {
     text-align: center;
     font-weight: 500;
 
-    div{
+    div {
+        @include cajaFlex (column, wrap, space-around, center);
         width: 200px;
         height: 150px;
         background-color: map-get($colores, color5);
@@ -107,102 +120,124 @@ nav {
     margin-bottom: 50px;
 }
 
-.eticaPics{
+.eticaPics {
     @include cajaFlex (row, nowrap, space-evenly, center);
     padding-top: 50px;
     animation-name: aparecer;
     animation-duration: 2s;
     animation-timing-function: linear;
 
-    :hover{
+    img {
+        @media screen and(max-width:992px) {
+            margin-bottom: 20px;
+        }
+        @media screen and(max-width:540px) {
+            width: 300px;
+        }
+    }
+
+    :hover {
         transform: scale(1.1);
         transition: all 2s;
     }
 
 }
 
-.fotos{
+.fotos {
     max-width: 400px;
     margin-top: 40px;
     border: solid 5px #000000;
     border-radius: 10px;
+
+    @media screen and(max-width:540px) {
+        width: 300px;
+    }
 }
 
-.galeria{
+.galeria {
     @include cajaFlex(row, wrap, space-around, center);
-    margin-top: 40px;
+    margin-top: 40px;s
 
-    :hover{
+    :hover {
         transform: scale(1.1);
         transition: all 1s;
     }
 }
 
-.video{
+.video {
     @include cajaFlex(column, wrap, center, center);
     margin-top: 40px;
+
+    iframe {
+        @media screen and(max-width:540px) {
+            width: 300px;
+        }
+    }
 }
 
-.titulos{
+.titulos {
     padding-left: 20px;
 }
 
-.formulario{
-@include cajaFlex (row, nowrap, space-evenly, center);
-width: 80%;
-margin: 40px 100px;
-/* background-color: map-get($colores, color2); */
-border-radius: 20px;
-
-    img{
-        width: 500px;
-    }
-
-
-/* .formulario{
-    @include cajaFlex(column,nowrap,space-around,center);
-    margin-top: 40px;
+.formulario {
+    @include cajaFlex (row, nowrap, space-evenly, center);
+    margin: 40px 100px;
     background-color: map-get($colores, color2);
     border-radius: 20px;
-    width: 500px; */
-    /* height: 500px; */
-    
 
-    label{
+    @media screen and(max-width:992px) {
+        width: auto;
+    }
+
+    @media screen and(max-width:540px) {
+        margin: inherit;
+        margin-top: 20px;
+    }
+
+    img {
+        max-width: 500px;
+
+        @media screen and(max-width:992px) {
+            width: 300px;
+        }
+    }
+
+    label {
         font-weight: 600;
         color: map-get($colores, color1)
     }
 
     .datos1 {
-        @include cajaFlex(column, nowrap, space-around, flex-start);
+        @include cajaFlex(column, wrap, space-around, flex-start);
         margin-top: 20px;
     }
 
     .datos2 {
         @include cajaFlex(column, nowrap, space-around, flex-start);
-        margin-top:20px;
+        margin-top: 20px;
     }
 
     .comentarios {
         @include cajaFlex(column, nowrap, space-around, flex-start);
-        margin-top:20px;
+        margin-top: 20px;
     }
 
     .terms {
         @include cajaFlex(column, nowrap, space-around, flex-start);
-        margin-top:20px;    
+        margin-top: 20px;
     }
+
     .botones {
         @include cajaFlex(row, nowrap, flex-start, flex-start);
-        margin-top:20px;
+        margin-top: 20px;
     }
 }
 
-    .contenido-footer {
-    @include cajaFlex (column, nowrap, space-between, center);
+.contenido-footer {
+    @include cajaFlex (column, nowrap, space-around, center);
     min-height: 50px;
     background-color: map-get($colores, color7);
     text-align: center;
     margin-top: 200px;
     padding-top: 5px;
-    }
+}
