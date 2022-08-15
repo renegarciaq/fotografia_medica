@@ -289,7 +289,7 @@ ul {
         align-items: center; } }
 
 .parallax {
-  background: url("/multimedia/objetivos.jpg");
+  background: url("../multimedia/objetivos.jpg");
   height: 600px;
   background-attachment: fixed;
   background-position: center;
